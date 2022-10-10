@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import Lists from './components/Lists';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const toDoList = [
+        {
+            id: 'todo1',
+            content: '스터디 진행하기',
+            date: new Date(2022, 7, 23),
+        },
+        {
+            id: 'todo2',
+            content: '스터디 진행하기',
+            date: new Date(2022, 2, 11),
+        },
+        {
+            id: 'todo3',
+            content: '스터디 진행하기',
+            date: new Date(2022, 9, 5),
+        },
+        {
+            id: 'todo4',
+            content: '스터디 진행하기',
+            date: new Date(2022, 9, 10),
+        },
+    ];
+
+    return (
+        <div>
+            <h2>To Do List</h2>
+            <Lists listItems={toDoList} />
+        </div>
+    );
 }
 
 export default App;

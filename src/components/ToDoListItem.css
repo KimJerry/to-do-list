@@ -1,0 +1,29 @@
+.to-do-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 10px 30px;
+}
+
+.task-item-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.to-do-description {
+    display:flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.to-do-list-item__check-circle {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #5C88D9;
+    border-radius: 50%;
+}
+
+.to-do-list__star {
+    color: #5C88D9;
+}
