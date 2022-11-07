@@ -1,0 +1,57 @@
+.new-to-do {
+    width: 70%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.new-to-do__content {
+    border-bottom: solid 0.5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.new-to-do__check-circle {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #5C88D9;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.new-to-do__content input {
+    border: none;
+    width: 100%;
+    height: 50px;
+    /*padding: 0 10px;*/
+}
+
+.new-to-do__content input::placeholder {
+    color: #2564CF;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.new-to-do__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #FAF9F8;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    border-radius: 5px 5px 0 0;
+
+}
+
+.new-to-do__deadline input {
+    border: none;
+}
+
+.new-to-do__insert button {
+    border: none;
+    width: 40px;
+    height: 35px;
+    margin-right: 15px;
+    background-color: white;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+}

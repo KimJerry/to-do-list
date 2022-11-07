@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Lists from './components/Lists';
+import Lists from './components/Lists/Lists';
+import NewToDo from './components/NewToDo/NewToDo';
 
 function App() {
     const toDoList = [
@@ -29,6 +30,7 @@ function App() {
     return (
         <div>
             <h2>To Do List</h2>
+            <NewToDo />
             <Lists listItems={toDoList} />
         </div>
     );

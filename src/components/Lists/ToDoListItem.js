@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ToDoDate from './ToDoDate';
-import Card from './UI/Card';
+import Card from '../UI/Card';
 import './ToDoListItem.css';
 
 const ToDoListItem = (props) => {
