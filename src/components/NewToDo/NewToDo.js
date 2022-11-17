@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './NewToDo.css';
 import '../UI/Card';
 
-function NewToDo() {
+function NewToDo(props) {
     const [enteredContent, setEnteredContent] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
 
@@ -23,7 +23,7 @@ function NewToDo() {
             date: new Date(enteredDate),
         };
 
-        console.log(newToDo);
+        props.onAddList(newToDo);
 
         setEnteredContent('');
         setEnteredDate('');

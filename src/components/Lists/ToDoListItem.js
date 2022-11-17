@@ -5,8 +5,12 @@ import Card from '../UI/Card';
 import './ToDoListItem.css';
 
 const ToDoListItem = (props) => {
+    function clickHandler(event) {
+        props.onDeleteToDo(props.id);
+    }
+
     return (
-        <Card className='to-do-list-item'>
+        <Card className='to-do-list-item' onClick={clickHandler}>
             <div className='task-item-wrapper'>
                 <div className='to-do-list-item__check-circle'></div>
                 <div className='to-do-description'>

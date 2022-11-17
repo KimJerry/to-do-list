@@ -29,3 +29,7 @@
 .to-do-list__star {
     color: #5C88D9;
 }
+
+.to-do-list-item:hover {
+    background-color: #F0F6FC;
+}
