@@ -3,13 +3,21 @@ import React from 'react';
 import './ToDoDate.css';
 
 const ToDoDate = (props) => {
-    const year = props.date.getFullYear();
-    const month = props.date.toLocaleString('ko-KR', { month: 'long' });
-    const day = props.date.toLocaleString('ko-KR', { day: '2-digit' });
+    let year = '';
+    let month = '';
+    let day = '';
+    let validDate = '';
+
+    if (props.date !== '') {
+        year = props.date.getFullYear();
+        month = props.date.toLocaleString('ko-KR', { month: 'long' });
+        day = props.date.toLocaleString('ko-KR', { day: '2-digit' });
+        validDate = `🗓 ${year} ${month} ${day}까지`;
+    }
 
     return (
         <div className='to-do-date'>
-            <div>{`🗓 ${year} ${month} ${day}까지`}</div>
+            <div>{validDate}</div>
         </div>
     );
 };

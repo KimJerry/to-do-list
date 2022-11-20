@@ -8,7 +8,6 @@ const ToDoListItem = (props) => {
     function clickHandler(event) {
         props.onDeleteToDo(props.id);
     }
-
     return (
         <Card className='to-do-list-item' onClick={clickHandler}>
             <div className='task-item-wrapper'>

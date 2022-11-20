@@ -1,0 +1,9 @@
+.main-contents {
+    position: relative;
+    display: flex;
+    font-size: 15px;
+}
+
+.list-wrapping {
+    flex-grow: 1;
+}

@@ -20,7 +20,7 @@ function NewToDo(props) {
 
         const newToDo = {
             content: enteredContent,
-            date: new Date(enteredDate),
+            date: isNaN(Date.parse(enteredDate)) ? '' : new Date(enteredDate),
         };
 
         props.onAddList(newToDo);

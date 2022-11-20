@@ -7,10 +7,16 @@ const Lists = (props) => {
     function deleteListHandler(idToDelete) {
         props.onDeleteToDo(idToDelete);
     }
+    let filteredList = props.listItems;
+    if (props.filteringOption === 'planned') {
+        filteredList = props.listItems.filter((curObj) => curObj.date !== '');
+    } else if (props.filteringOption === 'aside-all') {
+        filteredList = props.listItems;
+    }
 
     return (
         <div className='lists'>
-            {props.listItems.map((element) => (
+            {filteredList.map((element) => (
                 <ToDoListItem
                     key={element.id}
                     id={element.id}

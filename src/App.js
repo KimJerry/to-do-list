@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 
 import Lists from './components/Lists/Lists';
 import NewToDo from './components/NewToDo/NewToDo';
+import Header from './components/Header/Header';
+import Aside from './components/Aside/Aside';
+
+import './App.css';
 
 const DUMMY_DATA = [
     {
@@ -28,13 +32,13 @@ const DUMMY_DATA = [
 
 function App() {
     const [toDoList, setToDoList] = useState(DUMMY_DATA);
+    const [selectedOption, setSelectedOption] = useState('aside-all');
 
     function addToDoHandler(enteredToDoData) {
         const todoData = {
             ...enteredToDoData,
             id: Math.random().toString(),
         };
-
         setToDoList((prevState) => {
             return [...prevState, todoData];
         });
@@ -49,11 +53,24 @@ function App() {
         });
     }
 
+    const selectFilteringOptionHandler = (slctdOption) => {
+        setSelectedOption(slctdOption);
+    };
+
     return (
         <div>
-            <h2>To Do List</h2>
-            <NewToDo onAddList={addToDoHandler} />
-            <Lists listItems={toDoList} onDeleteToDo={deleteToDoHandler} />
+            <Header />
+            <div className='main-contents'>
+                <Aside onSelectOption={selectFilteringOptionHandler} />
+                <div className='list-wrapping'>
+                    <NewToDo onAddList={addToDoHandler} />
+                    <Lists
+                        listItems={toDoList}
+                        onDeleteToDo={deleteToDoHandler}
+                        filteringOption={selectedOption}
+                    />
+                </div>
+            </div>
         </div>
     );
 }
